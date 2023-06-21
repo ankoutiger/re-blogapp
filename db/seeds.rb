@@ -7,5 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Article.create(title: 'aaaaaaa', content: 'こんにちは！')
-Article.create(title: '３つ目の記事だよ', content: '聞いてる？')
+10.times do
+    Article.create(
+        title: Faker::Lorem.sentence(word_count: 3),
+        content: Faker::Lorem.sentence(word_count: 100)
+    )
+end
