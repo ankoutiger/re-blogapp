@@ -1,4 +1,4 @@
-<div class="artilce">
+<div class="article">
     <h1 class="article_title"><%= @article.title %></h1>
     <div class="article_detail">
         <%= image_tag 'default-avatar.png' %>
@@ -6,13 +6,21 @@
             <p>cohki0305</p>
             <p>2020/04/16</p>
         </div>
+        <div class="article_detail_actions">
+            <div class="dropdown">
+                <%= image_tag 'actions.svg', class: 'dropbtn' %>
+                <div class="dropdown-content mini">
+                    <%= link_to '編集する', edit_article_path(@article) %>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="article_cotent">
         <%= @article.content %>
     </div>
 
-    <div class="artilce_heart">
+    <div class="article_heart">
         <%= image_tag 'heart.svg' %>
     </div>
 
