@@ -17,6 +17,7 @@ class Article < ApplicationRecord
   validates :content, length:{ minimum:10 }
 
   validates :content, uniqueness: true
+  validates :title, format: { with: /\A(?!\@)/ }
 
   def display_created_at
     I18n.l(created_at, format: :default)
