@@ -16,6 +16,8 @@ class Article < ApplicationRecord
   validates :title, length: { minimum: 2 , maximum: 100 }
   validates :content, length:{ minimum:10 }
 
+  validates :content, uniqueness: true
+
   def display_created_at
     I18n.l(created_at, format: :default)
   end
