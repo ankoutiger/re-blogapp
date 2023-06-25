@@ -28,6 +28,7 @@ gem 'binding_of_caller'
 gem 'erb2haml'
 gem 'faker'
 gem 'hamlit'
+gem 'devise'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
