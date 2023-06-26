@@ -14,6 +14,8 @@
 #  index_articles_on_user_id  (user_id)
 #
 class Article < ApplicationRecord
+  has_one_attached :eyecatch
+
   validates :title, presence: true
   validates :content, presence: true
 
