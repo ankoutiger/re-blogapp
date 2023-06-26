@@ -24,11 +24,17 @@ class User < ApplicationRecord
 
   has_many :articles, dependent: :destroy
   has_one :profile, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :favorite_articles, through: :likes, source: :article
 
   delegate :birthday, :gender, :age, to: :profile, allow_nil: true
 
   def has_written?(article)
     articles.exists?(id: article.id)
+  end
+
+  def has_liked?(article)
+    likes.exists?(article_id: article.id)
   end
 
   def display_name
