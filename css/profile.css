@@ -3,6 +3,7 @@
 }
 .profilePage_user {
   display: flex;
+  margin-bottom: 32px;
 }
 .profilePage_user_image {
   display: flex;
