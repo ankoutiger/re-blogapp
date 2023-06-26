@@ -30,6 +30,8 @@ class Article < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
+  
+
   def display_created_at
     I18n.l(created_at, format: :default)
   end
